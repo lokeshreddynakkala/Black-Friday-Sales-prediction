@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import joblib
 import numpy as np
+import subprocess
+import sys
+subprocess.check_call([sys.executable, "-m", "pip", "install", "joblib"])
+
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -148,3 +152,4 @@ if st.button('GENERATE PREDICTION'):
         """, unsafe_allow_html=True)
 
 st.caption("Retail Prediction System ") 
+
